@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Stock</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <section class="flex">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Logo" class="logo-img">
+                Gundam<span>Store</span>
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="inventory.html">Inventory</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="logout.html">Logout</a></li>
+                </ul>
+            </nav>
+        </section>
+        <h1>Update Stock</h1>
+    </header>
+    <main>
+        <h2>Update Stock</h2>
+        <form action="inventory.html" method="post">
+            <label for="product_id">Product:</label>
+            <select name="product_id" id="product_id">
+                <option value="1">MG Gundam Barbatos 1/100</option>
+                <option value="2">Legend Kiyomori 1/100 (Red Ogre)</option>
+                <option value="3">MGEX Unicorn Gundam Ver. Ka.</option>
+            </select>
+            <label for="new_stock">New Stock:</label>
+            <input type="number" name="new_stock" id="new_stock" min="0" required>
+            <button type="submit">Update</button>
+        </form>
+    </main>
+</body>
+</html> 

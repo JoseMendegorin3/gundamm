@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+   
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .quick-view {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 90%;
+            max-width: 800px; /* Adjust max-width to control maximum width */
+            max-height: 90%;
+            overflow-y: auto;
+            background: white;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+        .quick-view img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .quick-view .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #555;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+        .show {
+            display: block;
+        }
+        .product-description ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .product-description ul ul {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+<header>
+    <section class="flex">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Logo" class="logo-img">
+      Gundam<span>Store</span>
+      
+        </a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+<div class="container">
+    <h1>Pick Your Weapon</h1>
+
+    <!-- Search Form -->
+    <form action="products.html" method="get">
+        <input type="text" name="search" value="" placeholder="Search products...">
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="products-grid">
+        <div class="product-item">
+            <img src="images/barbatos5.jpg" alt="MG Gundam Barbatos 1/100">
+            <div class="product-details">
+                <h2>MG Gundam Barbatos 1/100</h2>
+                <p>Price: $1000</p>
+                <p>Available: 1000</p>
+                <button type="button" onclick="document.getElementById('quick-view-1').classList.add('show'); document.querySelector('.overlay').classList.add('show');">Quick View</button>
+                <form action="order.html" method="post">
+                    <input type="hidden" name="product_id" value="1">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="1000" required>
+                    <button type="submit" name="place_order">Checkout</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Quick View Modal -->
+        <div id="quick-view-1" class="quick-view">
+            <div class="close" onclick="document.getElementById('quick-view-1').classList.remove('show'); document.querySelector('.overlay').classList.remove('show');">&times;</div>
+            <h2>MG Gundam Barbatos 1/100</h2>
+            <div class="product-description">
+                <ul>
+                    <li>Joining the prestigious Master Grade line is the 4th form of Gundam Barbatos from Gundam Iron-Blooded Orphans!</li>
+                    <li>The inner structure of the Gundam Frame and Dual Ahab reactors have been faithfully recreated and feature gimmicks that allow for dynamic posing including piston movement with various parts of the body including shoulders, chest, and legs.</li>
+                    <li>Color separation is used generously throughout the kit providing the easiest building experience yet for the Barbatos series.</li>
+                    <li>Product Features:
+                        <ul>
+                            <li>7 inches (17.78cm)</li>
+                            <li>Made of plastic</li>
+                            <li>From the Gundam Iron-Blooded Orphans anime</li>
+                            <li>Gundam Barbatos fourth form</li>
+                            <li>Gimmicks that allow for dynamic posing</li>
+                            <li>Piston movement with various parts</li>
+                            <li>Color separation is used generously</li>
+                            <li>Easy building experience</li>
+                            <li>Instructions may or may not include English translation</li>
+                        </ul>
+                    </li>
+                    <li>Box Contents:
+                        <ul>
+                            <li>Pieces to build Gundam Barbatos</li>
+                            <li>Mace</li>
+                            <li>Sword</li>
+                            <li>Smoothbore gun</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <img src="images/barbatos5.jpg" alt="MG Gundam Barbatos 1/100">
+            <img src="images/barbatos2.jpg" alt="MG Gundam Barbatos 1/100">
+            <img src="images/barbatos3.jpg" alt="MG Gundam Barbatos 1/100">
+            <img src="images/barbatos4.jpg" alt="MG Gundam Barbatos 1/100">
+        </div>
+
+        <div class="product-item">
+            <img src="images/kiyomori5.jpg" alt="Legend Kiyomori 1/100 (Red Ogre)">
+            <div class="product-details">
+                <h2>Legend Kiyomori 1/100 (Red Ogre)</h2>
+                <p>Price: $2000</p>
+                <p>Available: 1000</p>
+                <button type="button" onclick="document.getElementById('quick-view-2').classList.add('show'); document.querySelector('.overlay').classList.add('show');">Quick View</button>
+                <form action="order.html" method="post">
+                    <input type="hidden" name="product_id" value="2">
+                    <label for="quantity2">Quantity:</label>
+                    <input type="number" id="quantity2" name="quantity" min="1" max="1000" required>
+                    <button type="submit" name="place_order">Checkout</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Quick View Modal -->
+        <div id="quick-view-2" class="quick-view">
+            <div class="close" onclick="document.getElementById('quick-view-2').classList.remove('show'); document.querySelector('.overlay').classList.remove('show');">&times;</div>
+            <h2>Legend Kiyomori 1/100 (Red Ogre)</h2>
+            <div class="product-description">
+                <ul>
+                    <li>This is the Legend Kiyomori 1/100 (Red Ogre) model kit.</li>
+                </ul>
+            </div>
+            <img src="images/kiyomori5.jpg" alt="Legend Kiyomori 1/100 (Red Ogre)">
+            <img src="images/kiyomori.jpg" alt="Legend Kiyomori 1/100 (Red Ogre)">
+            <img src="images/kiyomori2.jpg" alt="Legend Kiyomori 1/100 (Red Ogre)">
+            <img src="images/kiyomori1.jpg" alt="Legend Kiyomori 1/100 (Red Ogre)">
+        </div>
+
+        <div class="product-item">
+            <img src="images/Unicorn1.jpg" alt="MGEX Unicorn Gundam Ver. Ka.">
+            <div class="product-details">
+                <h2>MGEX Unicorn Gundam Ver. Ka.</h2>
+                <p>Price: $3000</p>
+                <p>Available: 1000</p>
+                <button type="button" onclick="document.getElementById('quick-view-3').classList.add('show'); document.querySelector('.overlay').classList.add('show');">Quick View</button>
+                <form action="order.html" method="post">
+                    <input type="hidden" name="product_id" value="3">
+                    <label for="quantity3">Quantity:</label>
+                    <input type="number" id="quantity3" name="quantity" min="1" max="1000" required>
+                    <button type="submit" name="place_order">Checkout</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Quick View Modal -->
+        <div id="quick-view-3" class="quick-view">
+            <div class="close" onclick="document.getElementById('quick-view-3').classList.remove('show'); document.querySelector('.overlay').classList.remove('show');">&times;</div>
+            <h2>MGEX Unicorn Gundam Ver. Ka.</h2>
+            <div class="product-description">
+                <ul>
+                    <li>This is the MGEX Unicorn Gundam Ver. Ka.</li>
+                </ul>
+            </div>
+            <img src="images/Unicorn1.jpg" alt="MGEX Unicorn Gundam Ver. Ka.">
+            <img src="images/Unicorn2.jpg" alt="MGEX Unicorn Gundam Ver. Ka.">
+            <img src="images/Unicorn3.jpg" alt="MGEX Unicorn Gundam Ver. Ka.">
+            <img src="images/Unicorn4.jpg" alt="MGEX Unicorn Gundam Ver. Ka.">
+        </div>
+    </div>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" onclick="document.querySelectorAll('.quick-view').forEach(q => q.classList.remove('show')); document.querySelector('.overlay').classList.remove('show');"></div>
+
+</body>
+</html> 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inventory">
+<header>
+    <section class="flex">
+    <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Logo" class="logo-img">
+            Gundam<span>Store</span>
+        </a>
+         <nav class="navbar">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+<div class="container">
+    <h1>Inventory Management</h1>
+    <div class="inventory-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Stock Available</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>MG Gundam Barbatos 1/100</td>
+                    <td>$1000</td>
+                    <td>1000</td>
+                    <td>
+                        <form action="update_stock.html" method="post">
+                            <input type="hidden" name="product_id" value="1">
+                            <input type="number" name="new_stock" min="0" value="1000" required>
+                            <button type="submit" name="update_stock">Update Stock</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Legend Kiyomori 1/100 (Red Ogre)</td>
+                    <td>$2000</td>
+                    <td>1000</td>
+                    <td>
+                        <form action="update_stock.html" method="post">
+                            <input type="hidden" name="product_id" value="2">
+                            <input type="number" name="new_stock" min="0" value="1000" required>
+                            <button type="submit" name="update_stock">Update Stock</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>MGEX Unicorn Gundam Ver. Ka.</td>
+                    <td>$3000</td>
+                    <td>1000</td>
+                    <td>
+                        <form action="update_stock.html" method="post">
+                            <input type="hidden" name="product_id" value="3">
+                            <input type="number" name="new_stock" min="0" value="1000" required>
+                            <button type="submit" name="update_stock">Update Stock</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="links">
+        <a href="index.html">Back to Homepage</a>
+        <a href="logout.html">Logout</a>
+    </div>
+</div>
+   
+</body>
+</html> 
